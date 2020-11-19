@@ -2,6 +2,7 @@ package KayakAutomation.com.kayak.pageClasses;
 
 import KayakAutomation.com.kayak.base.BaseClass;
 import io.github.bonigarcia.wdm.SeleniumServerStandaloneManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
@@ -31,7 +32,7 @@ public class FlightPage extends BaseClass {
     //Locator for CheckBox Label
     By ckeckboxLabel = By.xpath("//div[contains(@class,'multi-select-container')]//div[@class='multiAirportCheckbox__code']");
     //locator for search Button
-    By searchButton= By.xpath("(//span[@class='v-c-p centre '])[1]");
+    By searchButton= By.xpath("(//button[contains(@id,'submit') and @aria-label='Search flights'])[1]");
 
     public FlightPage(WebDriver driver) {
         super(driver);
@@ -76,13 +77,15 @@ public class FlightPage extends BaseClass {
         return getElementlist(ckeckboxLabel);
     }
 
-    public WebElement getPlus(){
+    public WebElement getPlusSign(){
      return getElement(plusOrigin);
     }
+
 
     public WebElement getsearchButton(){
         return getElement(searchButton);
     }
+
 
 
 
@@ -101,10 +104,14 @@ public class FlightPage extends BaseClass {
     public void clickOnNearbyAirport(String airportName) throws InterruptedException {
         WebElement nearbyAirports=null;
         try {
-             js.executeScript("arguments[0].click()",getPlus());
-            // wait(getAirportPopup());
-             nearbyAirports = getAirportPopup();
-        }catch (Exception e)
+             WebElement plus=driver.findElement(By.cssSelector("div[data-placeholder='From?']>svg[class*='js-plus-icon _ikm _i1S _h-2 _ieD _ieE _h-Z _yd _ieB _id-']"));
+
+             js.executeScript("arguments[0].click();",plus);
+           // js.executeScript("arguments[0].click()",getPlusSign());
+             wait(getAirportPopup());
+             nearbyAirports=getAirportPopup();
+        }
+        catch (Exception e)
         {
             if(nearbyAirports==null)
                 System.out.println("not clicked");
@@ -118,7 +125,7 @@ public class FlightPage extends BaseClass {
            if(e.getText().equals(airportName))
            {
            js.executeScript("arguments[0].click()",e);
-           driver.findElement(By.cssSelector("#eGMj")).click();
+          // driver.findElement(By.cssSelector("#eGMj")).click();
            }
        }
     }
@@ -140,8 +147,6 @@ public class FlightPage extends BaseClass {
         clickMonth(depDate);
         clickMonth(returnDate);
     }
-
-
 //This method will check the date and get the attribute of the perticular date
     private void clickMonth(String date) throws InterruptedException {
        String[] array= date.split(" ");
@@ -166,8 +171,9 @@ public class FlightPage extends BaseClass {
         }
     }
 
-    public void clickOnSearch(){
+    public FlightOptionsPage clickOnSearch(){
         getsearchButton().click();
+        return new FlightOptionsPage();
     }
 
 }
