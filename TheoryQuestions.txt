@@ -35,13 +35,50 @@ Ans.Yes, the finally block will be executed even after a return statement in a m
 ****************************************************************************
 Collections:
 
-1. ArrayList, LinkedList, and Vector are all implementations of the List interface. Which of them is most efficient for adding and removing elements from the list? Explain your answer, including any other alternatives you may be aware of.
+1. ArrayList, LinkedList, and Vector are all implementations of the List interface.
+Which of them is most efficient for adding and removing elements from the list?
+Explain your answer, including any other alternatives you may be aware of.
+Ans. LinkedList gives  the best performance,because
+    ArrayList and Vector each use an array to store the elements of the list. As a result,
+    when an element is inserted into (or removed from) the middle of the list,
+    the elements that follow must all be shifted accordingly. Vector is synchronized,
+    so if a thread-safe implementation is not needed, in that case we use ArrayList rather than Vector.
+                        LinkedList, on the other hand, is implemented using a doubly linked list.
+    As a result, an inserting or removing an element only requires updating the links that immediately precede
+    and follow the element being inserted or removed.
+
 2. If one needs a Set, how do you choose between HashSet vs. TreeSet?
+Ans. If we need a fast set, we should use HashSet; if we need a sorted set, then TreeSet should be used;
+if we need a set that can be store the insertion order, LinkedHashSet should be used.
+
 14. Which collection classes provide random access of it’s elements?
+Ans.ArrayList,HashMap,TreeMap, Hashtable
+
 15. What is the Java Collection framework? List down its advantages?
+Ans.There are many classes in the collection framework.ArrayList,LinkedList,Stack,vector,Priority Queue,HashSet,LinkedHashSet,TreeSet etc.
+Advantages:
+1)Using the Java Collections Framework it Reduces programming effort.
+2)Collections works on Objects,and can store any data type Object.
+3)Procession on data using collection is fast.
+4)Code quality is enhanced with the use of well tested collections framework classes.
+5)Reusability and Interoperability.
+
 16. Why we use Set interface? What are main classes implementing Setinterface?
+Ans.Classes that implements Set interface are:HashSet,LinkedHashSet and TreeSet.
+Use:
+(1)classes that implements Set interface can store only unique values and avoid duplicates.
+(2)These clases can store only one null value.
+(3) is an unordered collection of objects.
+
 17. How hashmap works?
+Ans.HashMap works on principle of Hashing.An object that maps keys to values.
+
 18. What are different Collection views provided by Map interface?
+Ans.Map interface provides 3 views of key-values pairs stored in it:
+    key set view
+    value set view
+    entry set view
+    All the views can be navigated using iterators.
 **************************************************************************************************************
 Data Structures:
 
