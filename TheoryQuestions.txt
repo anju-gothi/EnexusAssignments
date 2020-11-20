@@ -1,0 +1,66 @@
+Oops:
+
+1. Why OOP?
+Ans.oop is Object Oriented programming.The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function. There are some oops concept like Inheritance,Polymorphism,Data Abstraction and Encapsulation.
+
+2. Can we override a method that throws runtime exception without throws clause?
+Ans.Yes,if the super-class method throws certain exception, we can override it without throwing any exception in subclass.
+
+3. Can we make a class both final and abstract at the same time?
+Ans. If we declare a class abstract, to use it, we must extend it and if we declare a class final we cannot extend it, since both contradict with each other we cannot declare a class both abstract and final if you do so a compile time error will be generated.
+
+4. What is the difference between Association, Aggregation, and Composition inOOP?
+Ans.Association:Association is a  weak relationship (a semantic dependency) between otherwise unrelated objects. An association relationship can be represented as one-to-one, one-to-many, or many-to-many.
+Aggregation:Aggregation is a specialized form of association between two or more objects in which each object has its own life cycle but there exists an ownership as well. 
+Composition:Composition is a specialized form of aggregation. In composition, if the parent object is destroyed, then the child objects also cease to exist. Composition is actually a strong type of aggregation and is sometimes referred to as a “death” relationship.
+
+5. Is Java a pure object-oriented language? if not why?
+Ans.Java is not pure object-oriented programming language because it supports primitive data types and everything is not an object in Java.
+
+6. What happens if an exception not caught?
+Ans. If an exception is not caught (with a catch block), the runtime system will abort the program  and an exception message will print to the console.
+
+7. Why char array is preferred to store password than String in Java?
+Ans.
+a)Strings are immutable:  Strings are immutable in Java and therefore if a password is stored as plain text it will be available in memory until Garbage collector clears it and as Strings are used in String pool for re-usability there are high chances that it will remain in memory for long duration, which is a security threat.
+       With an array, the data can be wiped explicitly data after its work is complete. The array can be overwritten and and the password won’t be present anywhere in the system, even before garbage collection.
+
+
+8. What happens if your Serializable class contains a member which is not serializable? How do you fix it?
+Ans. the class will not be serializable.It'll throw a NotSerializableException.We can fix it by declaring the field transient (which will prevent the field from being serialized, i.e. it will not be saved).
+
+
+9. Will the finally block be executed if the try or catch block executes a return statement?
+Ans.Yes, the finally block will be executed even after a return statement in a method. The finally block will always execute.
+****************************************************************************
+Collections:
+
+1. ArrayList, LinkedList, and Vector are all implementations of the List interface. Which of them is most efficient for adding and removing elements from the list? Explain your answer, including any other alternatives you may be aware of.
+2. If one needs a Set, how do you choose between HashSet vs. TreeSet?
+14. Which collection classes provide random access of it’s elements?
+15. What is the Java Collection framework? List down its advantages?
+16. Why we use Set interface? What are main classes implementing Setinterface?
+17. How hashmap works?
+18. What are different Collection views provided by Map interface?
+**************************************************************************************************************
+Data Structures:
+
+1. What is the difference between Stack and Queue data structure
+Ans.
+      (1)A stack is a linear data structure in which elements can be inserted and deleted only from one side of the list.Queue is a linear data structure in which elements can be inserted to one end and removed from another end.
+      (2)Stack works on First in First out principle and Queue works on First in Last out Principle.
+      (3)The insertion of an element into stack is called push operation, and deletion of an element from the stack is called pop operation. The insertion of an element in a queue is called an enqueue operation and the deletion of an element is called a dequeue operation.
+
+4. Difference between singly and doubly linked list in Java?
+Ans.(1)In singly linked list implementation is such as where the node contains some data and a pointer to the next node in the list.Doubly linked list has some more complex implementation where the node contains some data and a pointer to the next as well as the previous node in the list.
+ (2)Singly linked list allows traversal elements only in one way.Doubly linked list allows element two way traversal.
+  (3)Singly linked list are generally used for implementation of stacks.Doubly linked list can be used to implement stacks as well as heaps and binary trees.
+(4)Singly linked list is preferred when we need to save memory and searching is not required as pointer of single index is stored.If we need better performance while searching and memory is not a limitation in this case doubly linked list is more preferred.
+(5) singly linked list store pointer of only one node so consumes lesser memory. Doubly linked list uses more memory per node(two pointers).
+
+11. What are the various operations that can be performed on different Data Structures?
+Ans.There are different types of operations that can be performed for the manipulation of data in every data structure:Traversing,Searching,Insertion,Deletion.
+
+13. Which data structure is used for dictionary and spell checker?
+Ans.Hashing is one simple option for this. We can put all words in a hash table 
+
