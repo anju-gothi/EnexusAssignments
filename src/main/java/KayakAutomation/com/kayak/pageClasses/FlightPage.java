@@ -98,6 +98,7 @@ public class FlightPage extends BaseClass {
         getOrigin().sendKeys(city);
         getOrigin().sendKeys(Keys.ENTER);
 
+
     }
 
     //Select Nearby Airports

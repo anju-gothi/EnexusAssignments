@@ -1,0 +1,82 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "validate dropdown",
+        "description": "",
+        "id": "dropdown-feature;validate-dropdown",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7380989000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "set the browser in headless mode",
+            "match": {
+              "location": "StepDefinition.set_the_browser_in_headless_mode()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6873691200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is sending request  \"https://www.xe.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.xe.com/",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefinition.user_is_sending_request(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12712313300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User select one option from dropdown",
+            "match": {
+              "location": "StepDefinition.user_select_one_option_from_dropdown()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 48238200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "option successfully get selected",
+            "match": {
+              "location": "StepDefinition.option_successfully_get_selected()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Headless"
+          }
+        ]
+      }
+    ],
+    "name": "DropDown feature",
+    "description": "",
+    "id": "dropdown-feature",
+    "keyword": "Feature",
+    "uri": "src/test/java/AutoamteDropDown/dropdown.feature"
+  }
+]

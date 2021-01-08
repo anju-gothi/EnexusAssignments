@@ -17,9 +17,7 @@ public class ExtentReportUtility {
     //we can pass parameters to show on the report
         extent.addSystemInfo("Host name","Anju Gothi");
         extent.addSystemInfo("User name","Global");
-        extent.addSystemInfo("EnvironmentName","QAEnvironment");
-
-    }
+        extent.addSystemInfo("EnvironmentName","QAEnvironment");    }
 
     //All the status of all the testcase stored in ITestResult.
     //we can use result.getStatus(),result.getName() for any testMethod

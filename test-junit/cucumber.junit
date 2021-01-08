@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="27.015232">
+    <testcase classname="DropDown feature" name="validate dropdown" time="27.015232">
+        <system-out>
+            <![CDATA[Given set the browser in headless mode......................................passed
+When User is sending request  "https://www.xe.com/".........................passed
+Then User select one option from dropdown...................................passed
+Then option successfully get selected.......................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
