@@ -5,7 +5,9 @@ import SalesForceAssignmentPages.MyProfilePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
@@ -15,7 +17,7 @@ public class BaseTest {
     HomePage home;
     MyProfilePage profilepage;
     /* Launch https://www.login.salesforce.com and provide positive <username> and <password> data to SalesForce Application. 	SalesForce login page is launched and application home page is logged in with correct username.*/
-    @BeforeTest
+    @BeforeMethod
     public void testLaunchSite(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
@@ -25,9 +27,9 @@ public class BaseTest {
         profilepage=new MyProfilePage(driver);
         home.launchSite();
     }
-    @AfterTest
+    @AfterMethod
     public void tearDown(){
-       // driver.quit();
+        driver.quit();
     }
 
 }

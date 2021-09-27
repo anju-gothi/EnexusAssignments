@@ -19,5 +19,6 @@ public class TestHomePage extends BaseTest{
     public void verifyDropdown(){
     List<String> menuList=home.dropDown();
     System.out.println(menuList);
+
    }
 }
